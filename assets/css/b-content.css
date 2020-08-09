@@ -1,0 +1,15 @@
+.b .content {
+  width: 80vw;
+  height: auto;
+  margin: auto;
+  text-align: justify;
+}
+.b .content h4 {
+  text-align: end;
+  margin-top: 1rem;
+}
+@media screen and (max-width: 550px) {
+  .b .content {
+    width: 85vw;
+  }
+}
