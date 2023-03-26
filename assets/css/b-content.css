@@ -4,6 +4,9 @@
   margin: auto;
   overflow-y: auto;
   text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .b .content h4 {
   text-align: end;
