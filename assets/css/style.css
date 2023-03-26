@@ -76,3 +76,7 @@ body {
   position: relative;
   transition: background 0.5s;
 }
+
+.sound {
+  display: none;
+}

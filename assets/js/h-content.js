@@ -5,7 +5,9 @@ const element = document.querySelectorAll(".con-kado .elements .element"),
   conKado = document.querySelector(".con-kado"),
   kado = document.querySelector(".con-kado .kado"),
   text = document.querySelector(".text h1"),
-  tutup = document.querySelector(".con-kado .tutup");
+  tutup = document.querySelector(".con-kado .tutup"),
+  popper = document.querySelector(".popper"),
+  sound = document.querySelector(".sound");
 
 //map
 textDiv = [...text.textContent]
@@ -35,6 +37,8 @@ conKado.addEventListener("click", () => {
     setTimeout(() => {
       tutup.style.transform = "translate(0, -100vh)";
       container.style.backgroundColor = "white";
+      sound.play();
+
       setTimeout(() => {
         let inEl = 0,
           inPk = 0,
@@ -84,6 +88,7 @@ conKado.addEventListener("click", () => {
             inPk++;
           }
         }, 100);
+        popper.click()
         setInterval(() => {
           inCl = 0;
           inEl = 0;
@@ -98,3 +103,19 @@ conKado.addEventListener("click", () => {
 function rand(n) {
   return Math.round(Math.random() * n + 1);
 }
+
+
+conKado.addEventListener("click", function (e) {
+  party.confetti(this, {
+    count: party.variation.range(20, 40),
+    spread: 50
+  });
+});
+
+popper.addEventListener("click", function (e) {
+  party.confetti(this, {
+    count: party.variation.range(60, 70),
+    spread: 40,
+    size: 1.5
+  });
+});
